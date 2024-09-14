@@ -6,4 +6,7 @@
   (lib (name "lib-tools-dslogic")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-dslogic.kicad_sym")(options "")(descr ""))
   (lib (name "lib-tools-jlink")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-jlink.kicad_sym")(options "")(descr ""))
   (lib (name "lib-tools-stlink")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-stlink.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-modules-general")(type "KiCad")(uri "${KIPRJMOD}/lib-modules-general.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-modules-esp32")(type "KiCad")(uri "${KIPRJMOD}/lib-modules-esp32.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-modules-stm32")(type "KiCad")(uri "${KIPRJMOD}/lib-modules-stm32.kicad_sym")(options "")(descr ""))
 )
