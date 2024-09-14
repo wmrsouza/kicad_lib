@@ -1,0 +1,94 @@
+*********************************************************************
+
+*Spice_Netlist_Enabled Y
+*Spice_Primitive X
+*Spice_Model GENP_1P V1={V1} V2={V2} TD={Td} TR={Tr} TF={Tf} PW={PW} TS={Ts}
+*Spice_Lib_File Arys.cir
+*Spice_Node_Sequence 1 2
+
+.subckt genp_1p 1 2 VDC=5 V1=0 V2=5 TD=0 TR=0 TF=0 PW=500u TS=1m
+v1 1 2 dc {VDC} pulse({V1} {V2} {TD} {TR} {TF} {PW} {Ts})
+.ends genp_1p
+
+*********************************************************************
+
+*Spice_Netlist_Enabled Y
+*Spice_Primitive X
+*Spice_Model GENS_1P V0={V0} VRMS={VRMS} FREQ={FREQ} TD={TD} THETA={THETA}
+*Spice_Lib_File Arys.cir
+*Spice_Node_Sequence 1 2
+
+.subckt gens_1p 1 2 V0=0 VRMS=48 FREQ=2k TD=0 THETA=0
+v1 1 2 SIN({V0} {1.44*VRMS} {FREQ} {TD} {THETA} 0) 
+.ends gens_1p
+
+*********************************************************************
+
+*Spice_Netlist_Enabled Y
+*Spice_Primitive X
+*Spice_Model GENS_3P V0={V0} VRMS={VRMS} FREQ={FREQ} TD={TD} THETA={THETA}
+*Spice_Lib_File Arys.cir
+*Spice_Node_Sequence 1 2 3
+
+.subckt gens_3p 1 2 3 V0=0 VRMS=48 FREQ=2k TD=0 THETA=0
+v1 1 4 SIN({V0} {1.44*VRMS} {FREQ} {TD} {THETA}   0)
+v2 2 4 SIN({V0} {1.44*VRMS} {FREQ} {TD} {THETA} 120)
+v3 3 4 SIN({V0} {1.44*VRMS} {FREQ} {TD} {THETA} 240)
+.ends gens_3p
+
+*********************************************************************
+
+*Spice_Primitive X
+*Spice_Model GENS_1P_CTLD KV={KV} P={P} l={l} r={r}
+*Spice_Netlist_Enabled Y
+*Spice_Lib_File Arys.cir
+*Spice_Node_Sequence 1 2 3
+
+*KV: Constant do gerador em Volts / rpm
+*P : Numero de polos
+*l : Indutancia de disperso do enrolamento em henrys (L - M)
+*r : Resistencia do enrolamento rm ohms
+
+.subckt gens_1p_ctld 1 2 3 KV=1 P=2 l=0 r=0
+e1 4 2 vol={1.44 * KV * v(3) * sin(2 * pi * ((v(3) / 60) * (P / 2)) * time)}
+l1 5 4 {l} ic=0
+r1 1 5 {r}
+.ends gens_1p_ctld
+
+*********************************************************************
+
+*Spice_Primitive X
+*Spice_Model GENS_3P_CTLD KV={KV} P={P} l={l} r={r}
+*Spice_Netlist_Enabled Y
+*Spice_Lib_File Arys.cir
+*Spice_Node_Sequence 1 2 3 4
+
+*1: saida fase a -   0 graus
+*2: saida fase b - 120 graus
+*3: saida fase c - 240 graus
+*4: entrada rotacao em RPM
+*5: passivo neutro dos enrolamentos do motor
+
+*KV: Constante do gerador em Volts / rpm
+*P : Numero de polos
+*l : Indutancia de disperso do enrolamento em henrys (L - M)
+*r : Resistencia do enrolamento rm ohms
+
+.subckt gens_3p_ctld 1 2 3 4 5 KV=1 P=2 l=0 r=0
+e1  6 12 vol={1.44 * KV * v(4) * sin((2 * pi * ((P / 2) * v(4) / 60) * time) + (0 * pi / 3))}
+l1  9  6 {l}
+r1  1  9 {r}
+
+e2  7 12 vol={1.44 * KV * v(4) * sin((2 * pi * ((P / 2) * v(4) / 60) * time) + (2 * pi / 3))}
+r2 10  7 {r}
+l2  2 10 {l}
+
+e3  8 12 vol={1.44 * KV * v(4) * sin((2 * pi * ((P / 2) * v(4) / 60) * time) + (4 * pi / 3))}
+r3 11  8 {r}
+l3  3 11 {l}
+
+e4 5 0 vol={v(12)}
+r4 5 0 {1Meg}
+.ends gens_3p_ctld
+
+*********************************************************************
