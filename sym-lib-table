@@ -2,4 +2,8 @@
   (version 7)
   (lib (name "simul-general")(type "KiCad")(uri "${KIPRJMOD}/simul-general.kicad_sym")(options "")(descr ""))
   (lib (name "simul-generator")(type "KiCad")(uri "${KIPRJMOD}/simul-generator.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-tools-buspirate")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-buspirate.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-tools-dslogic")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-dslogic.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-tools-jlink")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-jlink.kicad_sym")(options "")(descr ""))
+  (lib (name "lib-tools-stlink")(type "KiCad")(uri "${KIPRJMOD}/lib-tools-stlink.kicad_sym")(options "")(descr ""))
 )
