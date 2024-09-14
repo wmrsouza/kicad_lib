@@ -1,0 +1,50 @@
+*********************************************************************
+
+.subckt mec2elec in+ in- omega_mec i_t r=0.1 l=1u KEmf=1000
+r1 in+ 1 {r}
+l1 1 2 {l}
+*shunt para medir corrente
+v1 2 3 0.0 
+e1 3 in- vol = {KEmf * v(omega_mec)}
+e3 i_t 0 vol = i(v1)
+.ends mec2elec
+
+*********************************************************************
+
+.subckt elec2mec i_t torque_mec KTorque=1
+e1 torque_mec 0 vol = {KTorque * v(i_t)}
+.ends elec2mec
+
+*********************************************************************
+
+*[r]=ohms
+*[l]=henry
+*[KEmf]=rpm / volt
+*[KTorque]=(newton x metro) / ampere
+*[KFriction]=newton/rpm
+
+.subckt dcmotor in+ in- omega_mec theta_mec torque_load inertia_load r=0.1 l=1u KEmf=1000 KTorque=1 KFriction=0 JMotor=1
+
+*x1 mec2elec in+ in- omega_mec i_t r={r} l={l} KEmf={KEmf}
+r101 in+ 101 {r}
+l101 101 102 {l}
+*shunt para medir corrente
+v101 102 103 0.0
+e101 103 in- vol = {KEmf * v(omega_mec)}
+e102 i_t 0 vol = i(v101)
+
+*x2 elec2mec i_t torque_mec KTorque={KTorque}
+e201 Torque_mec 0 vol = {KTorque * v(i_t)}
+
+e1 torque_res 0 vol = {v(torque_mec) - v(torque_load) - v(torque_friction)}
+e2 torque_friction 0 vol = {KFriction * v(omega_mec)}
+*alpha = v(torque_res / (JMotor + v(inertia_load))
+g1 0 omega_mec cur = {v(torque_res) / (JMotor + v(inertia_load))}
+c1 omega_mec 0 1 ic=0
+g2 0 theta_mec cur = {v(omega_mec)}
+c2 theta_mec 0 1 ic=0
+.ends dcmotor
+
+*********************************************************************
+
+.end
