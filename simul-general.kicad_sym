@@ -384,15 +384,6 @@
 				(hide yes)
 			)
 		)
-		(property "Spice_Netlist_Enabled" "Y"
-			(at 0 -6.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(symbol "avg_0_1"
 			(polyline
 				(pts
@@ -562,15 +553,6 @@
 		)
 		(property "Sim.Pins" "1=1 2=2"
 			(at 0 -12.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "ki_keywords" "pwm"
-			(at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -788,12 +770,13 @@
 				)
 			)
 		)
-		(property "Value" "${SYMBOL_NAME}"
+		(property "Value" ""
 			(at 0 5.08 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Footprint" ""
@@ -860,7 +843,7 @@
 			)
 		)
 		(property "Sim.Params" "K=1"
-			(at 0 2.54 0)
+			(at 0 0 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1601,7 +1584,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "tau=1"
+		(property "Sim.Params" "tau=1u"
 			(at 0 3.81 0)
 			(effects
 				(font
@@ -3775,23 +3758,6 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Params" "Ts=100u saw_min=0 saw_max=10 v_duty=5"
-			(at 0 3.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "ki_keywords" "pwm"
-			(at 0 0 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "ki_fp_filters" "R_*"
 			(at 0 0 0)
 			(effects
@@ -4003,7 +3969,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "U"
-			(at 0 6.35 0)
+			(at -1.27 6.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4244,7 +4210,7 @@
 			)
 		)
 		(property "Description" "voltage controlled switch"
-			(at 0 8.89 0)
+			(at 1.27 -8.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4253,7 +4219,7 @@
 			)
 		)
 		(property "Sim.Device" "SW"
-			(at 0 11.43 0)
+			(at 0 -11.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4275,6 +4241,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Sim.Pins" "1=ctrl+ 2=ctrl- 3=no+ 4=no-"
@@ -4596,21 +4563,21 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "V"
-			(at 0 7.62 0)
+			(at 3.81 0 0)
 			(effects
 				(font
 					(size 0.9906 0.9906)
 				)
-				(justify top)
+				(justify left top)
 			)
 		)
 		(property "Value" "12"
-			(at 0 5.08 0)
+			(at 3.81 -2.54 0)
 			(effects
 				(font
 					(size 0.9906 0.9906)
 				)
-				(justify top)
+				(justify left top)
 			)
 		)
 		(property "Footprint" ""
@@ -4632,7 +4599,7 @@
 			)
 		)
 		(property "Description" "dc voltage source"
-			(at 0 -2.54 0)
+			(at 0 -7.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4650,7 +4617,7 @@
 			)
 		)
 		(property "Sim.Type" "DC"
-			(at 0 -7.62 0)
+			(at 0 -10.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4766,7 +4733,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(property "Reference" "V"
-			(at 0 10.795 0)
+			(at 0 6.35 0)
 			(effects
 				(font
 					(size 0.9906 0.9906)
@@ -4775,7 +4742,7 @@
 			)
 		)
 		(property "Value" "${SYMBOL_NAME}"
-			(at 0 8.89 0)
+			(at 0 4.445 0)
 			(effects
 				(font
 					(size 0.9906 0.9906)
@@ -4801,7 +4768,7 @@
 			)
 		)
 		(property "Description" "pulsed voltage source"
-			(at 0 -7.62 0)
+			(at 0 -12.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4810,7 +4777,7 @@
 			)
 		)
 		(property "Sim.Pins" "1=+ 2=-"
-			(at 0 -16.51 0)
+			(at 0 -15.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4828,15 +4795,16 @@
 			)
 		)
 		(property "Sim.Type" "PULSE"
-			(at 0 6.35 0)
+			(at 0 -10.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Sim.Params" "y1=0 y2=5 td=0 tr=1u tf=1u tw=10u per=20u"
-			(at 0 3.81 0)
+			(at 0 7.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
