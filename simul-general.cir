@@ -138,13 +138,6 @@ r1 3 0 {1Meg}
 
 *********************************************************************
 
-.subckt vcsw 1 2 3 4 vt=2.5 vh=0.5 ron=0.1 roff=1meg
-.model vcswitch sw vt={vt} vh={vh} ron={ron} roff={roff}
-s1 4 3 2 1 vcswitch on
-.ends vcsw
-
-*********************************************************************
-
 .subckt vcvs in out+ out- gain=1
 e1 out+ out- vol = {gain * v(in)}
 r1 out+ out- {1Meg}
