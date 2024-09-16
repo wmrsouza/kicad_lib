@@ -1927,7 +1927,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Device" "C"
+		(property "Sim.Device" "L"
 			(at 0 -1.27 0)
 			(effects
 				(font
