@@ -1,8 +1,8 @@
 (kicad_symbol_lib
-	(version 20231120)
+	(version 20240819)
 	(generator "kicad_symbol_editor")
-	(generator_version "8.0")
-	(symbol "STLINKV2_BLACK_10PIN_SWD"
+	(generator_version "8.99")
+	(symbol "STLINKV2_BLACK"
 		(pin_names
 			(offset 1.016)
 		)
@@ -52,7 +52,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "STLINKV2_BLACK_10PIN_SWD_0_1"
+		(symbol "STLINKV2_BLACK_0_1"
 			(rectangle
 				(start 0 2.54)
 				(end 16.51 -12.7)
@@ -65,11 +65,11 @@
 				)
 			)
 		)
-		(symbol "STLINKV2_BLACK_10PIN_SWD_1_1"
-			(pin bidirectional line
+		(symbol "STLINKV2_BLACK_1_1"
+			(pin output line
 				(at -2.54 0 0)
 				(length 2.54)
-				(name "nRESET"
+				(name "nRST"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -77,42 +77,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at 19.05 -10.16 180)
-				(length 2.54)
-				(name "5.0V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 0 180)
-				(length 2.54)
-				(name "SWCLK"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -138,24 +102,6 @@
 					)
 				)
 			)
-			(pin power_in line
-				(at 19.05 -2.54 180)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin input line
 				(at -2.54 -5.08 0)
 				(length 2.54)
@@ -167,24 +113,6 @@
 					)
 				)
 				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 19.05 -5.08 180)
-				(length 2.54)
-				(name "SWDIO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -211,6 +139,78 @@
 				)
 			)
 			(pin power_out line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "5.0V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 0 180)
+				(length 2.54)
+				(name "SWCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 -2.54 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -5.08 180)
+				(length 2.54)
+				(name "SWDIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
 				(at 19.05 -7.62 180)
 				(length 2.54)
 				(name "3.3V"
@@ -229,7 +229,7 @@
 				)
 			)
 			(pin power_out line
-				(at -2.54 -10.16 0)
+				(at 19.05 -10.16 180)
 				(length 2.54)
 				(name "5.0V"
 					(effects
@@ -238,7 +238,7 @@
 						)
 					)
 				)
-				(number "9"
+				(number "10"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -247,8 +247,9 @@
 				)
 			)
 		)
+		(embedded_fonts no)
 	)
-	(symbol "STLINKV2_PINK_10PIN_SWD"
+	(symbol "STLINKV2_PINK"
 		(pin_names
 			(offset 1.016)
 		)
@@ -298,7 +299,7 @@
 				(hide yes)
 			)
 		)
-		(symbol "STLINKV2_PINK_10PIN_SWD_0_1"
+		(symbol "STLINKV2_PINK_0_1"
 			(rectangle
 				(start 0 2.54)
 				(end 16.51 -12.7)
@@ -311,11 +312,11 @@
 				)
 			)
 		)
-		(symbol "STLINKV2_PINK_10PIN_SWD_1_1"
-			(pin bidirectional line
+		(symbol "STLINKV2_PINK_1_1"
+			(pin output line
 				(at -2.54 0 0)
 				(length 2.54)
-				(name "nRESET"
+				(name "nRST"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -323,42 +324,6 @@
 					)
 				)
 				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_out line
-				(at 19.05 -10.16 180)
-				(length 2.54)
-				(name "5.0V"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin output line
-				(at 19.05 0 180)
-				(length 2.54)
-				(name "SWCLK"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -384,24 +349,6 @@
 					)
 				)
 			)
-			(pin bidirectional line
-				(at 19.05 -2.54 180)
-				(length 2.54)
-				(name "SWDIO"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_in line
 				(at -2.54 -5.08 0)
 				(length 2.54)
@@ -413,24 +360,6 @@
 					)
 				)
 				(number "5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at 19.05 -5.08 180)
-				(length 2.54)
-				(name "GND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -457,6 +386,78 @@
 				)
 			)
 			(pin power_out line
+				(at -2.54 -10.16 0)
+				(length 2.54)
+				(name "5.0V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 19.05 0 180)
+				(length 2.54)
+				(name "SWCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 19.05 -2.54 180)
+				(length 2.54)
+				(name "SWDIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 19.05 -5.08 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
 				(at 19.05 -7.62 180)
 				(length 2.54)
 				(name "3.3V"
@@ -475,9 +476,256 @@
 				)
 			)
 			(pin power_out line
-				(at -2.54 -10.16 0)
+				(at 19.05 -10.16 180)
 				(length 2.54)
 				(name "5.0V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+	(symbol "STLINKV2_WEACT"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(property "Reference" "U"
+			(at -7.62 5.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "${SYMBOL_NAME}"
+			(at -7.62 2.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 8.89 -6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 8.89 -6.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 7.62 -11.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(symbol "STLINKV2_WEACT_0_1"
+			(rectangle
+				(start -16.51 1.27)
+				(end 0 -24.13)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "STLINKV2_WEACT_1_1"
+			(pin bidirectional line
+				(at -19.05 -11.43 0)
+				(length 2.54)
+				(name "USB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number ""
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 2.54 0 180)
+				(length 2.54)
+				(name "3V3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin bidirectional line
+				(at 2.54 -2.54 180)
+				(length 2.54)
+				(name "SWDIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 2.54 -5.08 180)
+				(length 2.54)
+				(name "SWCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -7.62 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 2.54 -10.16 180)
+				(length 2.54)
+				(name "SWO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at 2.54 -12.7 180)
+				(length 2.54)
+				(name "NRST"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at 2.54 -15.24 180)
+				(length 2.54)
+				(name "RXD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 2.54 -17.78 180)
+				(length 2.54)
+				(name "TXD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 2.54 -20.32 180)
+				(length 2.54)
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -492,6 +740,25 @@
 					)
 				)
 			)
+			(pin power_out line
+				(at 2.54 -22.86 180)
+				(length 2.54)
+				(name "5V"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 		)
+		(embedded_fonts no)
 	)
 )
